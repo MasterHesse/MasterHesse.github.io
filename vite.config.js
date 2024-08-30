@@ -7,5 +7,6 @@ export default defineConfig({
   plugins: [
     vue(),
     markdownPlugin({ mode: ['html'] }) // 正确使用 markdownPlugin 而非 markdown
-  ]
+  ],
+  base: '/MasterHesse.github.io/',
 });
