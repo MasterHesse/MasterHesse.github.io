@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <h1>Contact Me</h1>
-    <p>你可以通过以下方式联系我：</p>
+    <p>You can contact me via:</p>
     <ul class="contact-info">
       <li>Email: <a href="hesskuro@gmail.com">hesskuro@gmail.com</a></li>
       <li>GitHub: <a href="https://github.com/MasterHesse" target="_blank">github.com/MasterHesse</a></li>
