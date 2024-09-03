@@ -29,20 +29,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(66, 185, 131, 0.95);
+  background: rgba(255, 255, 255, 0.1); /* 透明底色 */
   padding: 12px 20px;
   position: fixed;
   top: 0;
   width: calc(100% - 24px);
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px) saturate(180%); /* 增加饱和度和模糊效果 */
   overflow: hidden;
+  transition: background 0.3s ease-in-out; /* 平滑过渡效果 */
 }
 
 .navbar-left,
 .navbar-center,
 .navbar-right {
+
   display: flex;
   align-items: center;
 }
@@ -65,9 +67,9 @@
 }
 
 .navbar li a {
-  color: #ffffff;
+  color: #092a2a;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   padding: 8px 12px;
   border-radius: 5px;
@@ -75,8 +77,8 @@
 }
 
 .navbar li a:hover {
-  background-color: rgba(255, 221, 87, 0.8);
-  color: #333333;
+  background-color: #092a2a;
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
@@ -90,13 +92,13 @@
   .navbar-right {
     flex-basis: 100%;
     justify-content: center;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 
   .navbar-left ul,
   .navbar-right ul {
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
   }
 }
 

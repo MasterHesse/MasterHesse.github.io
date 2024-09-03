@@ -1,45 +1,35 @@
-/* src/assets/styles/global.css */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+body, #app {
+    width: 100%;
+    min-height: 100vh; /* 使容器的高度至少为视窗高度 */
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+            135deg,
+            rgba(213, 232, 232, 0.8), /* 红色 */ rgba(4, 225, 225, 0.8), /* 黑色 */ rgba(23, 100, 110, 0.8), /* 深橙色 */ rgb(9, 42, 42) /* 紫色 */
+    ) no-repeat fixed;
+    background-size: cover;
 }
 
-a {
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.3s;
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 40px); /* 总宽度减去左右各 20px */
+    max-width: 1200px; /* 可选：设置最大宽度 */
+    margin-left: 350px;
+    margin-right: 345px;
 }
 
-a:hover {
-    color: #2980b9;
-}
-
-h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.container {
-    margin-top: 30px;           /* 顶部间距 */
-    margin-inline: auto;        /* 左右居中 */
-    max-width: 800px;
+.text-background {
+    color: #ffffff;
     padding: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #2980b9;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.5); /* 给内容区域增加一个透明黑色背景，突出文本 */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 180%; /* 限制内容区域的宽度 */
+    text-align: left; /* 让文本居中 */
 }

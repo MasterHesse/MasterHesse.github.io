@@ -1,11 +1,13 @@
 <template>
-  <div class="container">
+  <div class="post">
     <h1>Blog Posts</h1>
-    <ul class="post-list">
-      <li v-for="post in posts" :key="post.title" class="post-item">
-        <router-link :to="`/blog/${post.id}`">{{ post.title }}</router-link>
-      </li>
-    </ul>
+    <div class="text-background custom-style">
+      <ul class="post-list">
+        <li v-for="post in posts" :key="post.title" class="post-item">
+          <router-link :to="`/blog/${post.id}`">{{ post.title }}</router-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -29,7 +31,25 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 垂直居中对齐 */
+
+  color: #092a2a;
+  font-size: 30px;
+  margin-top: 60px;
+  padding: 20px;
+  max-width: 800px;
+  height: 100vh; /* 如果需要可以调整 */
+}
+
+.text-background.custom-style {
+  width: 200%; /* 可以根据需要设置宽度 */
+}
+
 .post-list {
+  text-align: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -38,8 +58,8 @@ onMounted(async () => {
 .post-item {
   margin: 10px 0;
   padding: 15px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #f1cd17;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -52,7 +72,6 @@ onMounted(async () => {
 .post-item a {
   font-weight: bold;
   font-size: 1.1em;
-  color: #2c3e50;
+  color: #030303;
 }
-
 </style>

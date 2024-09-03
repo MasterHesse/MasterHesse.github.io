@@ -11,7 +11,7 @@
   text-align: left;
   padding: 10px;
   position: fixed;
-  width: calc(100% - 24px);
+  width: calc(100% - 20px);
   bottom: 0;
   left: 0;
   z-index: 1000;
