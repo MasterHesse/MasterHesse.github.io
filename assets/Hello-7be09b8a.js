@@ -15,7 +15,9 @@ const n={},t=`<h1>欢迎来到我的网站！</h1>
 <li><a href="https://github.com/MasterHesse">GitHub</a></li>
 </ul>
 <h2>最新动态</h2>
-<p>无</p>
+<ul>
+<li>无</li>
+</ul>
 <h2>感谢访问！</h2>
 <p>感谢您花时间访问我的网站。如果您有任何建议或意见，请随时与我联系。祝您有美好的一天！</p>
 <hr>
