@@ -26,7 +26,7 @@ const achievements = [
   position: relative;
 
   margin-top: 60px;
-  color: #092a2a;
+  color: #ffffff;
   font-size: 30px;
   padding: 20px;
   text-align: center;

@@ -34,7 +34,7 @@
   flex-direction: column;
   position: relative;
   top: 0;
-  color: #092a2a;
+  color: #ffffff;
   margin-left: 15px;
   font-size: 30px;
   margin-top: 60px;

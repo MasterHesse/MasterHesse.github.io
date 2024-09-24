@@ -28,19 +28,21 @@ onMounted(async () => {
 .blog-content {
   width: 90%;
   padding: 20px;
-  background-color: #092a2a;
+  background-color: rgba(9, 51, 66, 0.8);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   /* Ensure top margin to keep the content visible without vertical centering */
   margin-top: 40px;
   position: relative;
   top: 0; /* Ensure no vertical offset */
+  margin-bottom: 8%;
+  margin-top: 5%;
 }
 
 .back-button {
   display: inline-block;
   margin-bottom: 20px;
-  color: #3eda91;
+  color: rgba(40, 174, 189, 0.8);
   text-decoration: none;
 }
 

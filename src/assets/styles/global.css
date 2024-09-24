@@ -6,12 +6,10 @@ body, #app {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(
-            135deg,
-            rgba(213, 232, 232, 0.8), /* 红色 */ rgba(4, 225, 225, 0.8), /* 黑色 */ rgba(23, 100, 110, 0.8), /* 深橙色 */ rgb(9, 42, 42) /* 紫色 */
-    ) no-repeat fixed;
-    background-size: cover;
+    background: url('../../../public/forest.png') no-repeat center center fixed;
+    background-size: cover; /* 使背景图片覆盖整个网页 */
 }
+
 
 .page-container {
     display: flex;

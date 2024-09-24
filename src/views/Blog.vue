@@ -36,7 +36,7 @@ onMounted(async () => {
   flex-direction: column;
   align-items: center; /* 垂直居中对齐 */
 
-  color: #092a2a;
+  color: #ffffff;
   font-size: 30px;
   margin-top: 60px;
   padding: 20px;
@@ -58,7 +58,7 @@ onMounted(async () => {
 .post-item {
   margin: 10px 0;
   padding: 15px;
-  background-color: #f1cd17;
+  background-color: rgba(50, 216, 241, 0.8);
   border: 1px solid #ffffff;
   border-radius: 5px;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -72,6 +72,6 @@ onMounted(async () => {
 .post-item a {
   font-weight: bold;
   font-size: 1.1em;
-  color: #030303;
+  color: #092a2a;
 }
 </style>

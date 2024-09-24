@@ -1,6 +1,6 @@
 <template>
   <div class="home ">
-      <h1>Welcome, my Amigo! ^_^</h1>
+      <h1>Welcome, my Amigo! =w=</h1>
     <div class="text-background">
       <p class="text">
         Welcome to MasterHesse's Blog, where I will show my programming works,
@@ -23,7 +23,7 @@
   position: relative;
 
   margin-top: 60px;
-  color: #092a2a;
+  color: #ffffff;
   font-size: 30px;
   padding: 20px;
   text-align: center;

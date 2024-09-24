@@ -24,7 +24,7 @@ const works = [
   flex-direction: column;
   align-items: center; /* 垂直居中对齐 */
 
-  color: #092a2a;
+  color: #ffffff;
   font-size: 30px;
   margin-top: 60px;
   padding: 20px;

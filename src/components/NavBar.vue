@@ -67,7 +67,7 @@
 }
 
 .navbar li a {
-  color: #092a2a;
+  color: #ffffff;
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
@@ -77,7 +77,7 @@
 }
 
 .navbar li a:hover {
-  background-color: #092a2a;
+  background-color: rgba(32, 143, 157, 0.8);
   color: #ffffff;
 }
 

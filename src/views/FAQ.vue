@@ -20,14 +20,19 @@
 .faq {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 垂直居中对齐 */
 
-  color: #092a2a;
-  margin-top: 30px;           /* 顶部间距 */
-  padding: 20px;
-  text-align: left;
-  max-width: 800px;
+  position: relative;
+  top: 0;
+  color: #ffffff;
+  margin-left: 15px;
   font-size: 30px;
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+
+  height: 100vh; /* 父容器的高度，可根据需求调整 */
+  margin-right: 43px;
 }
 
 ul {

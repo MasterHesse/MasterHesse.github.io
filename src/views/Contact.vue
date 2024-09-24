@@ -36,7 +36,7 @@
 
   position: relative;
   top: 0;
-  color: #092a2a;
+  color: #ffffff;
   margin-left: 15px;
   font-size: 30px;
   margin-top: 60px;
@@ -57,7 +57,7 @@
 }
 
 .contact-info a:hover {
-  color: #3edac3; /* 设置悬停时链接的颜色 */
+  color: rgba(50, 216, 241, 0.8); /* 设置悬停时链接的颜色 */
   text-decoration: underline; /* 添加下划线以突出显示 */
 }
 
@@ -74,7 +74,7 @@ input, textarea {
 
 button {
   padding: 10px;
-  background-color: #f1cd17;
+  background-color: rgba(50, 216, 241, 0.8);
   color: #030303;
   font-weight: bold;
   border: none;
@@ -89,7 +89,7 @@ button {
 }
 
 .checkbox-container input {
-  accent-color: #42b983; /* 设置勾选框颜色 */
+  accent-color: #007bf5; /* 设置勾选框颜色 */
 }
 
 .checkbox-container label {
