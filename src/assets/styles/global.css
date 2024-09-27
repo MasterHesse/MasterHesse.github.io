@@ -6,10 +6,18 @@ body, #app {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../../../public/forest.png') no-repeat center center fixed;
+    background: url('../../../public/background.png') no-repeat center center fixed;
     background-size: cover; /* 使背景图片覆盖整个网页 */
+
+    font-family: "MyCustomFont",sans-serif;
 }
 
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../../../public/fonts/Silkscreen-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .page-container {
     display: flex;
@@ -22,6 +30,7 @@ body, #app {
 }
 
 .text-background {
+    font-family: "Times New Roman";
     color: #ffffff;
     padding: 20px;
     font-size: 30px;
