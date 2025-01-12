@@ -24,7 +24,7 @@
 - Lucide Icons
 
 ## 📦 项目结构
-
+```
 portfolio/
 ├── public/
 │ ├── favicon/
@@ -47,7 +47,7 @@ portfolio/
 ├── package.json
 ├── vite.config.js
 └── README.md
-
+```
 ## 🚀 快速开始
 
 ### 前置要求
