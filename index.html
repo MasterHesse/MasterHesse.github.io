@@ -1,15 +1,48 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MasterHesse Personal Web</title>
-    <script type="module" crossorigin src="/assets/index-05e199e6.js"></script>
-    <link rel="stylesheet" href="/assets/index-59a7b3e9.css">
+    <!-- 使用单个 PNG 图标 (建议使用32x32尺寸) -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,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">
+    
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>MasterHesse's Portfolio</title>
+    <style>
+      .loading-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--background-color, #ffffff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .loading-indicator::after {
+        content: "";
+        width: 2rem;
+        height: 2rem;
+        border: 0.25rem solid #0984e3;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-9a24b733.js"></script>
+    <link rel="stylesheet" href="/assets/index-383c81bf.css">
   </head>
   <body>
     <div id="app"></div>
+    <div class="loading-indicator"></div>
     
   </body>
 </html>
