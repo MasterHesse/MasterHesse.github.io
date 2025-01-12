@@ -1,0 +1,22 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "如何在大陆使用ChatGPT等海外语言模型",
+      "category": "其它",
+      "tags": ["Chat GPT", "AI", "GPT"],
+      "description": "给初入计算机领域的学习者提供如何上手使用GPT的方法",
+      "status": "completed",
+      "path": "/blogs/How_to_use_chatGPT_in_CN.md"
+    },
+    {
+      "id": "2",
+      "title": "如何使用代理",
+      "category": "其它",
+      "tags": ["Clash", "VPN", "V2ray"],
+      "description": "给初入计算机领域的大陆学习者提供如何使用代理工具的文章",
+      "status": "completed",
+      "path": "/blogs/How_to_use_VPN.md"
+    }
+  ]
+}

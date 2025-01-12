@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p >© 2024 Binhong Ye</p>
+    <p >© 2025 Mackenzie Yip</p>
   </footer>
 </template>
 

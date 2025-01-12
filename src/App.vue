@@ -1,16 +1,27 @@
 <template>
-  <div id="app">
-    <NavBar />
-    <router-view />
-    <Footer />
-  </div>
+  <NavBar />
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <script setup>
-import NavBar from './components/NavBar.vue';
-import Footer from './components/Footer.vue';
+import NavBar from './components/NavBar.vue'
+
 </script>
 
 <style>
-/* Add global styles here */
+@import './assets/styles/main.css';
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>

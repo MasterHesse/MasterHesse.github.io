@@ -1,13 +1,46 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MasterHesse Personal Web</title>
+    <!-- 使用单个 PNG 图标 (建议使用32x32尺寸) -->
+    <link rel="icon" type="image/png" href="public/images/logo.png">
+    
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>MasterHesse's Portfolio</title>
+    <style>
+      .loading-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--background-color, #ffffff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .loading-indicator::after {
+        content: "";
+        width: 2rem;
+        height: 2rem;
+        border: 0.25rem solid #0984e3;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
+    <div class="loading-indicator"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -1,124 +1,143 @@
 <template>
-  <nav class="navbar">
-    <div class="navbar-left">
-      <ul>
-        <li><router-link to="/blog">Blog</router-link></li>
-        <li><router-link to="/works">Works</router-link></li>
-        <li><router-link to="/achievements">Achievements</router-link></li>
-      </ul>
-    </div>
+  <nav :class="['navbar', { 'navbar--scrolled': scrolled }]">
+    <div class="navbar__container">
+      <!-- Logo 部分 -->
+      <router-link to="/" class="navbar__logo">
+        <img 
+          src="/images/logo.png"
 
-    <div class="navbar-center">
-      <ul>
-        <li><router-link to="/">MasterHesse</router-link></li>
-      </ul>
-    </div>
+          alt="MasterHesse Logo" 
+          class="logo"
+        />
+        <span class="logo-text">MasterHesse</span>
+      </router-link>
 
-    <div class="navbar-right">
-      <ul>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/contact">Contact</router-link></li>
-        <li><router-link to="/faq">FAQ</router-link></li>
-      </ul>
+      <!-- 导航菜单 -->
+      <div class="navbar__menu">
+        <router-link to="/" class="navbar__link">Home</router-link>
+        <router-link to="/projects" class="navbar__link">Projects</router-link>
+        <router-link to="/blog" class="navbar__link">Blog</router-link>
+        <router-link to="/contact" class="navbar__link">Contact</router-link>
+        <router-link to="/faq" class="navbar__link">FAQ</router-link>
+      </div>
     </div>
   </nav>
 </template>
 
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const scrolled = ref(false)
+
+const handleScroll = () => {
+  scrolled.value = window.scrollY > 50
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>
+
 <style scoped>
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background: transparent;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar--scrolled {
+  background-color: var(--background-color);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.navbar__container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.1); /* 透明底色 */
-  padding: 12px 20px;
-  position: fixed;
-  top: 0;
-  width: calc(100% - 24px);
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px) saturate(180%); /* 增加饱和度和模糊效果 */
-  overflow: hidden;
-  transition: background 0.3s ease-in-out; /* 平滑过渡效果 */
+  padding: 0 var(--spacing-unit);
 }
 
-.navbar-left,
-.navbar-center,
-.navbar-right {
-
+.navbar__logo {
   display: flex;
   align-items: center;
-}
-
-.navbar-left ul,
-.navbar-right ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-center ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li a {
-  color: #ffffff;
   text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+  color: var(--text-color);
+  gap: 0.5rem;
 }
 
-.navbar li a:hover {
-  background-color: rgba(32, 143, 157, 0.8);
-  color: #ffffff;
+.logo {
+  height: 30px;
+  width: auto;
+  transition: transform 0.3s ease;
+  /* 确保图片渲染清晰 */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
-@media (max-width: 1024px) {
-  .navbar {
-    flex-wrap: wrap;
-    padding: 10px 20px;
-  }
-
-  .navbar-left,
-  .navbar-center,
-  .navbar-right {
-    flex-basis: 100%;
-    justify-content: center;
-    margin-bottom: 15px;
-  }
-
-  .navbar-left ul,
-  .navbar-right ul {
-    justify-content: center;
-    gap: 15px;
-  }
+.logo-text {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 8px 10px;
-  }
+.navbar__menu {
+  display: flex;
+  gap: calc(var(--spacing-unit) / 2);
+}
 
-  .navbar-left,
-  .navbar-center,
-  .navbar-right {
-    width: 100%;
-    justify-content: space-between;
-  }
+.navbar__link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--base-font-size);
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
 
-  .navbar-left ul,
-  .navbar-right ul {
-    gap: 8px;
+.navbar__link:hover {
+  color: var(--secondary-color);
+  background-color: var(--background-color-light);
+}
+
+.navbar__link.router-link-active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.navbar__logo:hover .logo {
+  transform: scale(1.05);
+}
+
+.navbar__logo:hover .logo-text {
+  color: var(--secondary-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 48em) {
+  .navbar__menu {
+    display: none;
+  }
+  
+  .logo-text {
+    display: none;
+  }
+  
+  .logo {
+    height: 25px;
   }
 }
 </style>
