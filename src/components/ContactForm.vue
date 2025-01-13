@@ -10,13 +10,20 @@ const formData = ref({
 
 const status = ref('')
 const loading = ref(false)
+const confirmChecked = ref(false) // 添加确认复选框的状态
 
 const handleSubmit = async (e) => {
   e.preventDefault()
+  
+  // 添加确认复选框的验证
+  if (!confirmChecked.value) {
+    status.value = 'error'
+    return
+  }
+  
   loading.value = true
   
   try {
-    // 这里使用 formspree 作为后端服务
     const response = await fetch('https://formspree.io/f/mvggdwkp', {
       method: 'POST',
       headers: {
@@ -28,6 +35,7 @@ const handleSubmit = async (e) => {
     if (response.ok) {
       status.value = 'success'
       formData.value = { name: '', email: '', subject: '', message: '' }
+      confirmChecked.value = false // 重置复选框
     } else {
       throw new Error('Failed to send message')
     }
@@ -91,6 +99,21 @@ const handleSubmit = async (e) => {
         placeholder="请输入你想说的话"
         rows="5"
       ></textarea>
+    </div>
+
+        <!-- 添加确认复选框 -->
+        <div class="contact-form__checkbox-group">
+      <label class="contact-form__checkbox-label">
+        <input
+          type="checkbox"
+          v-model="confirmChecked"
+          required
+          class="contact-form__checkbox"
+        />
+        <span class="contact-form__checkbox-text">
+          我确认我已阅读过FAQ，且我的问题不在FAQ中
+        </span>
+      </label>
     </div>
 
     <div class="contact-form__footer">
@@ -291,6 +314,60 @@ const handleSubmit = async (e) => {
 .contact-form__status--error {
   background-color: color-mix(in srgb, #ef4444 15%, transparent);
   color: #ef4444;
+}
+
+.contact-form__checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.contact-form__checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.contact-form__checkbox {
+  margin-top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.3);
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.contact-form__checkbox:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.contact-form__checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact-form__checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.125rem rgba(59, 130, 246, 0.5);
+}
+
+.contact-form__checkbox-text {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
 }
 
 @media (max-width: 48em) {
