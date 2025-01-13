@@ -47,6 +47,7 @@ onMounted(() => {
 
 <template>
   <main class="blog">
+    <div class="container">
     <div class="container blog__container">
       <header class="blog__header">
         <h1 class="blog__title">博客文章</h1>
@@ -100,6 +101,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
+  </div>
   </main>
 </template>
 

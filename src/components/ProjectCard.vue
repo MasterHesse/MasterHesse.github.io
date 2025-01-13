@@ -23,17 +23,22 @@
   
         <div class="project-card__footer">
           <div class="project-card__stats">
-            <span class="project-card__stat">
-              <span class="project-card__stat-icon">📅</span>
-              {{ project.year }}
-            </span>
-            <span class="project-card__stat">
-              <span class="project-card__stat-icon">
-                {{ project.status === 'completed' ? '✅' : '🚧' }}
-              </span>
-              {{ getStatusText(project.status) }}
-            </span>
-          </div>
+      <span class="project-card__stat">
+        <span class="project-card__stat-icon">📅</span>
+        {{ project.year }}
+      </span>
+      <span class="project-card__stat project-card__stat--status">
+        <span class="project-card__stat-icon">
+          {{ project.status === 'completed' ? '✅' : '🚧' }}
+        </span>
+        <span 
+          class="project-card__status"
+          :class="{ 'project-card__status--in-progress': project.status === 'in-progress' }"
+        >
+          {{ project.status === 'in-progress' ? '进行中' : '已完成' }}
+        </span>
+      </span>
+    </div>
           
           <a 
             v-if="project.githubUrl"
@@ -67,10 +72,7 @@
       }
     }
   })
-  
-  const getStatusText = (status) => {
-    return status === 'completed' ? '已完成' : '进行中'
-  }
+
   
   defineEmits(['click'])
   </script>
@@ -151,49 +153,86 @@
   }
   
   .project-card__stats {
-    display: flex;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap; /* 防止换行 */
+  min-width: 0; /* 允许子元素收缩 */
+}
+
+.project-card__stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: calc(var(--base-font-size) * 0.9);
+  color: color-mix(in srgb, var(--text-color) 70%, transparent);
+  white-space: nowrap; /* 防止文本换行 */
+}
+
+.project-card__stat--status {
+  flex-shrink: 0; /* 防止状态标签被压缩 */
+}
+
+.project-card__status {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  white-space: nowrap; /* 防止文本换行 */
+  display: inline-block; /* 确保标签保持在一行 */
+}
+
+.project-card__status--in-progress {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: calc(var(--base-font-size) * 0.9);
+  transition: all 0.3s ease;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none; /* 确保没有边框 */
+  cursor: pointer; /* 保持指针样式 */
+  font-weight: 500; /* 添加字重 */
+  min-width: 5rem; /* 确保最小宽度 */
+  text-align: center; /* 文字居中 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影增加按钮感 */
+}
+
+.project-card__link:hover {
+  transform: translateY(-0.25rem);
+  background-color: color-mix(in srgb, var(--secondary-color) 90%, black);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 悬浮时增加阴影 */
+}
+
+.project-card__link:active {
+  transform: translateY(0); /* 点击时的效果 */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 48em) {
+  .project-card__footer {
+    flex-direction: column;
     gap: 1rem;
+    align-items: flex-start; /* 在移动端左对齐 */
   }
   
-  .project-card__stat {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: calc(var(--base-font-size) * 0.9);
-    color: color-mix(in srgb, var(--text-color) 70%, transparent);
+  .project-card__stats {
+    width: 100%;
+    justify-content: space-between; /* 在移动端分散对齐 */
   }
   
-  .project-card__stat-icon {
-    font-size: 1em;
+  project-card__link {
+    width: 100%;
+    justify-content: center;
   }
-  
-  .project-card__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5em 1em;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-size: calc(var(--base-font-size) * 0.9);
-    transition: all 0.3s ease;
-    background-color: var(--secondary-color);
-    color: white;
-  }
-  
-  .project-card__link:hover {
-    transform: translateY(-0.25rem);
-    background-color: color-mix(in srgb, var(--secondary-color) 90%, black);
-  }
-  
-  @media (max-width: 48em) {
-    .project-card__footer {
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-    .project-card__link {
-      width: 100%;
-      justify-content: center;
-    }
-  }
+}
   </style>

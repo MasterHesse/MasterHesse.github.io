@@ -1,6 +1,11 @@
 @import './variables.css';
 @import './animations.css';
 
+:root {
+  --max-width: 80vw; /* 设置为视窗宽度的80% */
+  --container-padding: 2rem; /* 容器两侧的内边距 */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +27,10 @@ body {
 }
 
 .container {
-  width: var(--container-width);
+  width: var(--max-width);
+  max-width: 1920px; /* 可选：设置一个最大宽度限制，防止在超大屏幕上过宽 */
   margin: 0 auto;
-  padding: var(--spacing-unit);
+  padding: 0 var(--container-padding);
 }
 
 .section {

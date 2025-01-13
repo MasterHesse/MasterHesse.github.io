@@ -115,7 +115,7 @@ onMounted(() => {
 /* 点号动画 */
 .dots::after {
   content: '.';
-  animation: dots 0.8s steps(4, end) infinite;
+  animation: dots 0.5s steps(4, end) infinite;
   width: 1.5em;
   display: inline-block;
 }

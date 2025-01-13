@@ -1,5 +1,6 @@
 <template>
     <main class="projects">
+      <div class="container">
       <div class="container projects__container">
         <!-- 项目页面标题 -->
         <header class="projects__header">
@@ -115,6 +116,7 @@
           </div>
         </div>
       </Transition>
+    </div>
     </main>
   </template>
   
@@ -296,7 +298,7 @@ const projects = [
   
   .projects__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
     gap: var(--spacing-unit);
   }
   

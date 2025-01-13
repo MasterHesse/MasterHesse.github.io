@@ -1,5 +1,6 @@
 <template>
     <main class="home">
+      <div class="container">
       <!-- Hero Section -->
       <section class="hero">
         <div class="container hero__container">
@@ -13,20 +14,21 @@
               专注于计算机科学领域，深耕后端开发与全栈技术。
               目前正在学习 Spring 生态系统、Vue.js 前端开发和 Rust 系统编程。
             </p>
-            <div class="hero__cta" ref="ctaRef">
+            <!-- <div class="hero__cta" ref="ctaRef">
               <router-link to="/projects" class="hero__button">
                 查看项目
               </router-link>
               <router-link to="/contact" class="hero__button hero__button--outline">
                 联系我
               </router-link>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="hero__scroll-indicator" @click="scrollToAbout">
           <div class="hero__scroll-arrow"></div>
         </div>
       </section>
+    </div>
   
       <!-- About Section -->
       <section class="about" ref="aboutRef">

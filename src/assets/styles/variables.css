@@ -15,6 +15,9 @@
     
     /* Container */
     --container-width: min(90%, 75rem);
+
+    --max-width: 80vw; /* 设置为视窗宽度的80% */
+    --container-padding: 2rem; /* 容器两侧的内边距 */
   }
   
   /* Dark mode variables */
