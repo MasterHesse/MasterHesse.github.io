@@ -82,7 +82,7 @@
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-    background-color: color-mix(in srgb, var(--background-color) 95%, var(--secondary-color) 5%);
+    background-color: rgba(30, 41, 59, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
     height: 100%;
@@ -197,7 +197,7 @@
   text-decoration: none;
   font-size: calc(var(--base-font-size) * 0.9);
   transition: all 0.3s ease;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: white;
   border: none; /* 确保没有边框 */
   cursor: pointer; /* 保持指针样式 */

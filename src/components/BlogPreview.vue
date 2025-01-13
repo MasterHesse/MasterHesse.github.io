@@ -168,7 +168,7 @@ defineProps({
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: #3b82f6;
+  background-color: var(--primary-color);
   color: white;
   border-radius: 0.5rem;
   font-size: 0.875rem;
@@ -177,6 +177,13 @@ defineProps({
 }
 
 .blog-card__button:hover {
-  background-color: #2563eb;
+  transform: translateY(-0.25rem);
+  background-color: color-mix(in srgb, var(--primary-color) 90%, black);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 悬浮时增加阴影 */
+}
+
+.blog-card:active{
+  transform: translateY(0); /* 点击时的效果 */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 </style>
