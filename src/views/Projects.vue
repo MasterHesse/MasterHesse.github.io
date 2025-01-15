@@ -179,6 +179,24 @@ const projects = [
     ],
     tags: ['C++', 'Python', 'Java'],
     githubUrl: 'https://github.com/MasterHesse/Algorithms_and_DataStructures-MyTimusSolution'
+  },
+  {
+    id: 4,
+    title: 'FWWB-Vehicle_Detection_System',
+    category: '全栈',
+    description: '2025服务外包大赛赛题：大型交通枢纽辖域内通行车辆智能检测系统',
+    longDescription: '车辆智能检测系统的设计目的是为保障大型交通枢纽辖域内的安全与秩序，其核心功能是对进入域内道路的车辆进行精确检测、识别和分类，确保机场或车站等场所内道路的通行安全和旅客安全。',
+    year: '2025',
+    status: 'in-progress',
+    features: [
+      'Yolo',
+      'Python',
+      'Spring',
+      'SQL',
+      'CV'
+    ],
+    tags: ['C++', 'Python', 'Java'],
+    githubUrl: 'https://github.com/HuBuGuii/FWWB-Vehicle_Detection_System'
   }
 ]
   
