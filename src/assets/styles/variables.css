@@ -1,9 +1,10 @@
 :root {
     /* Colors */
-    --primary-color: #1dd1d1;
-    --secondary-color: #fc852a;
-    --background-color: #144355;
-    --text-color: #ffffff;
+    --primary-color: #0c5088;
+    --secondary-color: #a90d08;
+    --background-color: #ffffff;
+    --text-color: #ff6b1b;
+    --card-background-color:#fefefe;
     
     /* Typography */
     --base-font-size: clamp(1rem, calc(0.8rem + 0.5vw), 1.2rem);

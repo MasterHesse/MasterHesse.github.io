@@ -61,13 +61,13 @@ defineProps({
 
 <style scoped>
 .blog-card {
-  background-color: rgba(30, 41, 59, 0.5);
+  background-color: var(--card-background-color);
   border-radius: 1rem;
   overflow: hidden;
   height: 100%;
   transition: transform 0.3s ease;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #e9e9e9;
 }
 
 .blog-card:hover {
@@ -83,14 +83,14 @@ defineProps({
 
 .blog-card__category {
   font-size: 0.875rem;
-  color: #3b82f6;
+  color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
 .blog-card__title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-color);
   margin-bottom: 0.5rem;
   line-height: 1.4;
 }
@@ -103,21 +103,21 @@ defineProps({
 
 .blog-card__tags {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .blog-card__tag {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #e2e8f0;
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
+  font-size: calc(var(--base-font-size) * 0.8);
+    padding: 0.25em 0.75em;
+    background-color: color-mix(in srgb, var(--secondary-color) 15%, transparent);
+    border-radius: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .blog-card__description {
-  color: #94a3b8;
+  color: var(--text-color);
   font-size: 0.875rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;

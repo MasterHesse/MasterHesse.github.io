@@ -112,7 +112,7 @@ onMounted(() => {
 .blog-post__title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: var(--text-color);
+  color: #002569;
   font-family: Arial Black, Gadget, sans-serif; /* 标题使用衬线字体 */
   font-weight: 700;
   line-height: 1.2;
@@ -165,7 +165,7 @@ onMounted(() => {
   line-height: 1.8;
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  */
   font-size: 1.1rem;
-  color: var(--text-color);
+  color: #002569;
 }
 
 .blog-post__footer {
@@ -193,7 +193,7 @@ onMounted(() => {
 <style>
 /* GitHub Markdown 样式覆盖 */
 .markdown-body {
-  color: var(--text-color) !important;
+  color: #002569 !important;
   background-color: transparent !important;
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }

@@ -81,8 +81,9 @@
   .project-card {
     position: relative;
     border-radius: 1rem;
+    border: 1px solid #e9e9e9;
     overflow: hidden;
-    background-color: rgba(30, 41, 59, 0.5);
+    background-color: var(--card-background-color);
     cursor: pointer;
     transition: all 0.3s ease;
     height: 100%;
@@ -108,7 +109,7 @@
   
   .project-card__category {
     font-size: calc(var(--base-font-size) * 0.8);
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
     display: block;
   }
