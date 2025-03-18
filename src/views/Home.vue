@@ -11,8 +11,8 @@
               <span class="hero__role">Full-Stack Developer</span>
             </h1>
             <p class="hero__description" ref="descriptionRef">
-              专注于计算机科学领域，深耕后端开发与全栈技术。
-              目前正在学习 Spring 生态系统、Vue.js 前端开发和 Rust 系统编程。
+              就读计算机科学专业，专注于后端开发与全栈技术<br>
+              目前正在学习 Spring + Vue 的全栈开发和 Rust 系统编程
             </p>
             <!-- <div class="hero__cta" ref="ctaRef">
               <router-link to="/projects" class="hero__button">
@@ -33,7 +33,7 @@
       <!-- About Section -->
       <section class="about" ref="aboutRef">
         <div class="container about__container">
-          <h2 class="about__title">关于这个网站</h2>
+          <h2 class="about__title">关于我</h2>
           <div class="about__grid">
             <div class="about__card" v-for="(feature, index) in features" :key="index">
               <div class="about__card-icon">{{ feature.icon }}</div>
@@ -57,24 +57,24 @@
   
   const features = [
     {
-      icon: '🚀',
-      title: '响应式设计',
-      description: '完全响应式的设计确保在所有设备上都能完美展示'
+      icon: '🖥️',
+      title: '后端与架构',
+      description: '专注于后端开发与系统架构设计'
     },
     {
       icon: '📝',
-      title: '博客系统',
-      description: '基于Markdown的博客系统，阐述我的最新想法'
+      title: '博客日记',
+      description: '记录和阐述我的最新想法'
     },
     {
       icon: '💼',
       title: '项目展示',
-      description: '展示个人项目作品，给新手开发者提供一些思路'
+      description: '展示我的项目作品，给起步的开发者提供一些思路'
     },
     {
       icon: '📬',
-      title: '联系方式',
-      description: '多种联系方式，让我们保持联系'
+      title: '请联系我',
+      description: '让我们在交流中进步'
     }
   ]
   

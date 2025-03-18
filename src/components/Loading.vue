@@ -26,7 +26,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(26, 26, 26, 0.9);
+    background-color: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,9 +50,4 @@
     opacity: 0;
   }
   
-  @media (prefers-color-scheme: dark) {
-    .loading-overlay {
-      background-color: rgba(26, 26, 26, 0.95);
-    }
-  }
   </style>

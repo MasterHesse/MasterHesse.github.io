@@ -237,7 +237,7 @@ const handleSubmit = async (e) => {
 }
 
 /* 点击效果 */
-.contact-form__submit-btn:active {
+/* .contact-form__submit-btn:active {
   transform: translateY(0);
   background: linear-gradient(
     135deg,
@@ -247,10 +247,10 @@ const handleSubmit = async (e) => {
   box-shadow: 
     0 0.125rem 0.5rem rgba(59, 130, 246, 0.3),
     0 0.0625rem 0.125rem rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* 禁用状态 */
-.contact-form__submit-btn:disabled {
+/* .contact-form__submit-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
   transform: none;
@@ -260,7 +260,7 @@ const handleSubmit = async (e) => {
     #64748b 100%
   );
   box-shadow: none;
-}
+} */
 
 /* 加载动画效果（当按钮处于加载状态时） */
 .contact-form__submit-btn[data-loading="true"] {
@@ -332,7 +332,7 @@ const handleSubmit = async (e) => {
   width: 1rem;
   height: 1rem;
   border-radius: 0.25rem;
-  border: 0.125rem solid rgba(255, 255, 255, 0.3);
+  border: 0.125rem solid var(--primary-color);
   appearance: none;
   background-color: transparent;
   cursor: pointer;
@@ -353,31 +353,19 @@ const handleSubmit = async (e) => {
   transform: translate(-50%, -50%);
   width: 0.5rem;
   height: 0.5rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: var(--text-color); /* 正方形颜色 */
+  border-radius: 0.125rem; /* 圆角，使边缘缓和 */
 }
 
-.contact-form__checkbox:focus {
+/* .contact-form__checkbox:focus {
   outline: none;
   box-shadow: 0 0 0 0.125rem rgba(59, 130, 246, 0.5);
-}
+} */
 
 .contact-form__checkbox-text {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-color);
   line-height: 1.5;
 }
 
-@media (max-width: 48em) {
-  .contact-form__submit-btn {
-    width: 100%;
-    max-width: none;
-  }
-  
-  .contact-form__status {
-    max-width: none;
-  }
-}
 </style>
