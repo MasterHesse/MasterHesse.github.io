@@ -29,9 +29,9 @@ const links = [
     stroke: 'none'
   },
   {
-    name: 'Outlook email',
-    url: 'mailto:mackenzieyip@outlook.com',
-    copyText: 'mackenzieyip@outlook.com',
+    name: 'Email',
+    url: 'mailto:masterhesse@163.com',
+    copyText: 'masterhesse@163.com',
     icon: `<path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2m20 0l-10 7L2 6m20 0v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6" />`,
     fill: 'none',
     stroke: 'currentColor'

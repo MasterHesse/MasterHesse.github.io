@@ -2,9 +2,9 @@
     /* Colors */
     --primary-color: #0c5088;
     --secondary-color: #a90d08;
-    --background-color: #ffffff;
+    --background-color: #e8dec8;
     --text-color: #ff6b1b;
-    --card-background-color:#fefefe;
+    --card-background-color:#e8dec8;
     
     /* Typography */
     --base-font-size: clamp(1rem, calc(0.8rem + 0.5vw), 1.2rem);
@@ -19,10 +19,3 @@
     
   }
   
-  /* Dark mode variables */
-  /* @media (prefers-color-scheme: dark) {
-    :root {
-      --background-color: #0b2b37;
-      --text-color: #ffffff;
-    }
-  } */
