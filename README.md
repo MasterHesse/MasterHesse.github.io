@@ -104,11 +104,6 @@ VITE_APP_DESCRIPTION=Web Developer & Designer
 }
 ```
 
-## 📱 响应式设计
-- 移动端：< 640px
-- 平板：640px - 1024px
-- 桌面端：> 1024px
-
 ## 🔧 自定义配置
 ### Logo 设置
 1. 替换 logo 文件：
@@ -126,7 +121,7 @@ VITE_APP_DESCRIPTION=Web Developer & Designer
 - 建议提供多种尺寸（16x16, 32x32, 64x64）
 
 ## 📞 联系方式
-Email: mackenzieyip@outlook.com
+Email: masterhesse@163.com
 Blibili: 407512807
 
 Built with ❤️ by MasterHesse
