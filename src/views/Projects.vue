@@ -212,6 +212,29 @@ const projects = [
     ],
     tags: ['leetcode', 'Rust'],
     githubUrl: 'https://github.com/MasterHesse/Rust-for-leetcode-top150'
+  },
+  {
+    id: 6,
+    title: 'RAG增强检索知识库系统',
+    category: '全栈',
+    description: 'RAG&MCP+Ollama-Deepseek+云服务器',
+    longDescription: '这是一套基于 Ollama DeepSeek、OpenAI 等流行模型构筑的RAG+MCP增强知识库检索系统。RAG提供文档+Git仓库的解析，MCP提供AI调用的提效，构筑智能化AI提效流',
+    year: '2025',
+    status: 'in-progress',
+    features: [
+      'Spring AI',
+      'Spring boot',
+      'SQL',
+      'Redis',
+      'Ollama',
+      'Deepseek',
+      'RAG',
+      'MCP',
+      'Docker',
+      'Java'
+    ],
+    tags: ['Spring AI', 'RAG', 'MCP'],
+    githubUrl: 'https://github.com/MasterHesse/ai-rag-knowledge/tree/main'
   }
 ]
   
